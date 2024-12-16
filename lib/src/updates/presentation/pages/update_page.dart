@@ -336,14 +336,19 @@ class _UpdatePageState extends State<UpdatePage> {
       'type': build.type,
       'isPhysicalDevice': build.isPhysicalDevice,
       'systemFeatures': build.systemFeatures,
-      'displaySizeInches':
-          ((build.displayMetrics.sizeInches * 10).roundToDouble() / 10),
-      'displayWidthPixels': build.displayMetrics.widthPx,
-      'displayWidthInches': build.displayMetrics.widthInches,
-      'displayHeightPixels': build.displayMetrics.heightPx,
-      'displayHeightInches': build.displayMetrics.heightInches,
-      'displayXDpi': build.displayMetrics.xDpi,
-      'displayYDpi': build.displayMetrics.yDpi,
+      // <<<<<<<<<>>>>>>>>
+      // ! TO BE DONE - investigate
+      // Was available in device_info_plus: ^8.2.2
+      // but not in device_info_plus: ^11.2.0 (maybe deprecation or API refactored)
+      // 'displaySizeInches':
+      //     ((build.displayMetrics.sizeInches * 10).roundToDouble() / 10),
+      // 'displayWidthPixels': build.displayMetrics.widthPx,
+      // 'displayWidthInches': build.displayMetrics.widthInches,
+      // 'displayHeightPixels': build.displayMetrics.heightPx,
+      // 'displayHeightInches': build.displayMetrics.heightInches,
+      // 'displayXDpi': build.displayMetrics.xDpi,
+      // 'displayYDpi': build.displayMetrics.yDpi,
+      // <<<<<<<<<>>>>>>>>
       'serialNumber': build.serialNumber,
     };
   }
